@@ -42,9 +42,9 @@ jobs:
       # Step 6: Push to Azure Container Registry
       - name: Push to Azure Container Registry
         run: |
-          az acr login --name omelchenkorvcontainerregistry
-          docker tag my-image-name:latest omelchenkorvcontainerregistry.azurecr.io/my-image-name:latest
-          docker push omelchenkorvcontainerregistry.azurecr.io/my-image-name:latest
+          az acr login --name statisticsservicecontainerregistry
+          docker tag my-image-name:latest statisticsservicecontainerregistry.azurecr.io/my-image-name:latest
+          docker push statisticsservicecontainerregistry.azurecr.io/my-image-name:latest
 
       # Step 7: Deploy to Azure Container Instance
       - name: Deploy to Azure Container Instance
