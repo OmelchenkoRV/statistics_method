@@ -48,7 +48,7 @@ jobs:
         run: |
           az container create \
             --resource-group ${{ secrets.RESOURCE_GROUP }} \
-            --name statistics_service \
+            --name statistics-service \
             --image omelchenkorvcontainerregistry.azurecr.io/my-image-name:latest \
             --cpu 1 \
             --memory 1.5 \
