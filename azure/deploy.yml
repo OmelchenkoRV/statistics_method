@@ -25,7 +25,7 @@ jobs:
         docker push omelchenkorvcontainerregistry.azurecr.io/fastapi-swarm:latest
     - name: Deploy to App Service
       run: |
-        az webapp create --name swarm \
-          --resource-group d-swarm \
+        az webapp create --name statistics_service \
+          --resource-group statistics_service \
           --plan ASP-dswarm-b719 \
-          --deployment-container-image-name omelchenkorvcontainerregistry.azurecr.io/fastapi-swarm:latest
+          --deployment-container-image-name omelchenkorvcontainerregistry.azurecr.io/fastapi-statistics_service:latest

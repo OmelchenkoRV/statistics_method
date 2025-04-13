@@ -46,7 +46,7 @@ jobs:
         run: |
           az container create \
             --resource-group ${{ secrets.RESOURCE_GROUP }} \
-            --name aci-simpleapp \
+            --name statistics_service \
             --image omelchenkorvcontainerregistry.azurecr.io/my-image-name:latest \
             --cpu 1 \
             --memory 1.5 \
