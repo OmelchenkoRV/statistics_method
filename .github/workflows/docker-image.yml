@@ -1,12 +1,15 @@
-name: Build and Deploy to ACI
+name: Build and deploy a container to an Azure Web App
+
+env:
+  AZURE_WEBAPP_NAME: statistics microservice  # set this to the name of your Azure Web App
 
 on:
-  workflow_dispatch:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
-    
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build-and-deploy:
